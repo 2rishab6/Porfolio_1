@@ -421,7 +421,7 @@ nav .fa-solid{
 }
 
 /* small screen */
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 600px){
     #header{
         background-image: url(phn.png);
     }
