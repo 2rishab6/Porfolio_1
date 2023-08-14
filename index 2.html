@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Porfolio Web Site❤️</title>
+    <link rel="shortcut icon" type="image/jpg" href="R.png" />
+    <script src="https://kit.fontawesome.com/c007a463bd.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        #header {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background: url(Real_puku_1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .logo {
+            width: 20vh;
+            height: 10vh;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .logo:hover {
+            width: 22vh;
+            height: 12vh;
+            box-shadow: 0px 0px 20px whitesmoke;
+        }
+
+        .container {
+            padding: 10px 7%;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+            position: relative;
+            transition: 0.15s;
+        }
+
+        nav ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: linear-gradient(81deg, rgba(237, 66, 9, 1) 0%, rgba(232, 14, 235, 1) 36%, rgba(15, 55, 229, 1) 60%, rgba(109, 233, 116, 1) 100%);
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.15s;
+        }
+
+        nav ul li a:hover::after {
+            font-size: 20px;
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            font-size: 20px;
+        }
+
+        .header-text {
+            margin-top: 20%;
+            font-size: 30px;
+        }
+
+        .header-text p {
+            font-size: 30px;
+            transition: 0.2s;
+        }
+
+        .header-text p:hover {
+            font-size: 35px;
+            color: red;
+            text-shadow: 0px 0px 2.5px whitesmoke;
+        }
+
+        .header-text h1 {
+            font-size: 60px;
+            margin-top: 20px;
+        }
+
+        .header-text h1 span {
+            color: red;
+            transition: 0.09s;
+        }
+
+        .header-text h1 span:hover {
+            font-size: 63px;
+            color: red;
+            text-shadow: 0px 0px 2.5px whitesmoke;
+        }
+
+        /* -- --------about-------- */
+
+        #about {
+            padding: 80px 0;
+            color: #ababab;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .about-col-1 {
+            flex-basis: 35%;
+        }
+
+        .about-col-1 img {
+            width: 450px;
+            height: 700px;
+            border: 2.5px dotted red;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .about-col-1 img:hover {
+            width: 460px;
+            height: 710px;
+            border: 3px double red;
+            border-radius: 23px;
+            box-shadow: 0px 0px 20px whitesmoke;
+        }
+
+        .about-col-2 {
+            flex-basis: 60%;
+        }
+
+        .sub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: whitesmoke;
+            transition: 0.15s;
+        }
+
+        .sub-title:hover {
+            font-size: 63px;
+            color: red;
+        }
+
+        .tab-titles {
+            display: flex;
+            margin: 20px 0px 40px;
+        }
+
+        .tab-links {
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-links::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.3s;
+        }
+
+        .tab-links.active-link::after {
+            width: 50%;
+        }
+
+        .tab-contents ul li {
+            list-style: circle;
+            margin: 10px 0;
+        }
+
+        .tab-contents ul li span {
+            font-size: 14px;
+            color: #f0769d;
+        }
+
+        .tab-contents {
+            display: none;
+        }
+
+        .tab-contents.active-tab {
+            display: block;
+        }
+
+        /* services */
+
+        #services {
+            padding: 30px 0;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+
+        .services-list div {
+            background-color: #262626;
+            border-radius: 25px;
+            padding: 40px;
+            font-size: 16px;
+            font-weight: 300;
+            transition: 0.2s;
+        }
+
+        .services-list div:hover {
+            box-shadow: 0px 0px 20px whitesmoke;
+            transform: translate(10px, -10px);
+            background: #ff004f;
+        }
+
+        .services-list div i {
+            font-size: 50px;
+        }
+
+        .services-list div a {
+            text-decoration: none;
+            color: yellow;
+            font-size: 15px;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        /* ---- portfolio ----*/
+
+        #portfolio {
+            padding: 30px 0;
+        }
+
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+
+        .work {
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work img {
+            width: 100%;
+            border-radius: 30px;
+            display: block;
+        }
+        .layer{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.6 ) ,#ff004f);
+            border-radius: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#"> About </a></li>
+                    <li><a href="#"> Services </a></li>
+                    <li><a href="#"> Portfolio </a></li>
+                    <li><a href="#"> Contact </a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Web Developer🫶</p>
+                <h1>Hi , I am <span>Rishab Deb Paul</span> <br> From Kolkata .</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about------------  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="phn.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quas distinctio amet aperiam harum similique facilis optio,
+                        officiis laboriosam illo vitae dignissimos aut placeat,
+                        necessitatibus laborum impedit tenetur! Magnam,
+                        pariatur corrupti.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quas distinctio amet aperiam harum similique facilis optio,
+                        officiis laboriosam illo vitae dignissimos aut placeat,
+                        necessitatibus laborum impedit tenetur! Magnam,
+                        pariatur corrupti.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quas distinctio amet aperiam harum similique facilis optio,
+                        officiis laboriosam illo vitae dignissimos aut placeat,
+                        necessitatibus laborum impedit tenetur! Magnam,
+                        pariatur corrupti.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quas distinctio amet aperiam harum similique facilis optio,
+                        officiis laboriosam illo vitae dignissimos aut placeat,
+                        necessitatibus laborum impedit tenetur! Magnam,
+                        pariatur corrupti.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quas distinctio amet aperiam harum similique facilis optio,
+                        officiis laboriosam illo vitae dignissimos aut placeat,
+                        necessitatibus laborum impedit tenetur! Magnam,
+                        pariatur corrupti.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Full Stact Web Developer</span><br> Designing of Front End & Back End </li>
+                            <li><span>Java Developer</span><br> Desiging Web App </li>
+                            <li><span>App Developer</span><br> Desiging Android & IOS App </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>1st year</span><br> C Programming </li>
+                            <li><span>2nd Year </span><br> DSA & DAA </li>
+                            <li><span>3rd Year</span><br> Web Development </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span> 2019 </span><br> Secondary Education </li>
+                            <li><span> 2019-2021 </span><br> Higher Secondary Education </li>
+                            <li><span> 2021 - 2025 </span><br> B.Tech From UEM,Kolkata </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ----------services------------ -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2> <i class="fa-solid fa-code"></i> Web Design</h2>
+                    <p>
+                        Our web design services aim to elevate your online presence and engage your target audience
+                        effectively.
+                        We create stunning and user-friendly interfaces that work seamlessly on all devices.
+                        With a focus on visual aesthetics and functionality,
+                        we craft custom websites that reflect your brand's unique identity.
+                        Our designs prioritize readability, loading speed, and responsiveness,
+                        ensuring an enjoyable browsing experience for your visitors. Let us transform your ideas into an
+                        exceptional website that leaves a lasting impression and drives business growth.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2> <i class="fa-brands fa-java"></i> JAVA Development </h2>
+                    <p>
+                        Java is a powerful and versatile programming language that offers platform independence and
+                        object-oriented programming capabilities. With its "write once, run anywhere" philosophy, Java
+                        allows developers to build robust and scalable applications for a wide range of devices and
+                        platforms. It boasts a vast ecosystem of libraries, frameworks, and tools, making it a popular
+                        choice for enterprise-level software development and web applications. Java's strong community
+                        support and regular updates ensure its relevance and effectiveness in modern software
+                        development.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2> <i class="fa-brands fa-app-store-ios"></i> App development</h2>
+                    <p>
+                        App development involves creating software applications for various platforms, such as mobile,
+                        web, or desktop. It encompasses a range of skills, including coding, design, testing, and
+                        deployment. From concept to delivery, our app development services focus on user-centric
+                        experiences, performance optimization, and adherence to industry standards. We collaborate
+                        closely with clients to understand their needs and deliver innovative and functional apps that
+                        cater to their target audience, ensuring seamless user interactions and enhanced business
+                        outcomes.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------porfolio------- -->
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="sub-title">
+                My Work
+            </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel error tenetur voluptatem culpa
+                            repellat corporis fugit suscipit quos porro omnis quod dolorum minus perspiciatis veniam,
+                            deserunt, illum iusto aspernatur voluptates?
+                        </p>
+                        <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-2.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel error tenetur voluptatem culpa
+                            repellat corporis fugit suscipit quos porro omnis quod dolorum minus perspiciatis veniam,
+                            deserunt, illum iusto aspernatur voluptates?
+                        </p>
+                        <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-3.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel error tenetur voluptatem culpa
+                            repellat corporis fugit suscipit quos porro omnis quod dolorum minus perspiciatis veniam,
+                            deserunt, illum iusto aspernatur voluptates?
+                        </p>
+                        <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</html>
